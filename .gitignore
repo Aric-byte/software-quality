@@ -1,0 +1,6 @@
+bin/
+obj/
+*.user
+.vs/
+Lab3-WhiteBoxTesting/testBubbleSort/testBubbleSort
+TestResults/
