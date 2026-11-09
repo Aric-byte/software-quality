@@ -1,0 +1,6 @@
+digraph G { graph[fontname="WenQuanYi Zen Hei", dpi=150]; node[fontname="WenQuanYi Zen Hei", shape=box, style=rounded]; edge[fontname="WenQuanYi Zen Hei"];
+s[label="开始",shape=oval]; a[label="j = 0"]; b[label="j < 9 ?",shape=diamond]; c[label="i = 0"];
+d[label="i < 10 - j ?",shape=diamond]; f[label="a[i] > a[i+1] ?",shape=diamond];
+g[label="temp=a[i]; a[i]=a[i+1]; a[i+1]=temp"]; i[label="i++"]; j[label="j++"]; e[label="结束",shape=oval];
+s->a->b; b->c[label="是"]; b->e[label="否"]; c->d; d->f[label="是"]; d->j[label="否"];
+f->g[label="是"]; f->i[label="否"]; g->i; i->d; j->b; }

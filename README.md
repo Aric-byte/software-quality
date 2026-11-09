@@ -6,6 +6,18 @@
 | 实验2 黑盒测试 | [Lab2-BlackBoxTesting](Lab2-BlackBoxTesting) | 等价类划分 + 测试用例 + AutoRunner 脚本 + xUnit 自动化测试 |
 | 实验3 白盒测试 | [Lab3-WhiteBoxTesting](Lab3-WhiteBoxTesting) | 冒泡排序的基本路径测试 + CppUnit 测试工程 |
 
+## 实验报告
+
+按评分标准（实验说明 / 实验分析 / 程序运行结果 / 实验体会 / 报告标识）编写，每个实验提供 Markdown 与 Word 两个版本：
+
+| 实验 | 上课日期 | 报告 |
+|---|---|---|
+| 高质量编程 | 2026.11.9、11.16 | `Lab1-HighQualityProgramming/实验1报告-高质量编程.docx` |
+| 黑盒测试 | 2026.11.23、11.30 | `Lab2-BlackBoxTesting/实验2报告-黑盒测试.docx` |
+| 白盒测试 | 2026.12.7、12.14 | `Lab3-WhiteBoxTesting/实验3报告-白盒测试.docx` |
+
+提交前需补充：学号、姓名、班级、指导教师，以及报告中标注【截图】处的 Windows 运行截图（WinForms 界面、AutoRunner 录制回放）。流程图源文件在 `diagrams/`。
+
 ## 运行
 
 ```bash

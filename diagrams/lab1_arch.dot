@@ -1,0 +1,6 @@
+digraph G { graph[fontname="WenQuanYi Zen Hei", rankdir=LR, dpi=150]; node[fontname="WenQuanYi Zen Hei", shape=record]; edge[fontname="WenQuanYi Zen Hei"];
+ui[label="{TriangleApp (WinForms)|MainForm\l- sideATextBox / sideBTextBox / sideCTextBox\l- checkButton / resultLabel\l+ CheckButton_Click()\l}"];
+core[label="{TriangleCore (类库)|TriangleClassifier\l+ Classify(string,string,string)\l+ Classify(int,int,int)\l+ GetDescription(TriangleType)\l- IsTriangle() / TryParseSide()\l}"];
+en[label="{«enum» TriangleType|InvalidInput\lNotATriangle\lScalene\lIsosceles\lEquilateral\l}"];
+test[label="{TriangleCore.Tests (xUnit)|EquivalenceClassTests\l}"];
+ui->core[label="调用"]; core->en; test->core[label="测试"]; }

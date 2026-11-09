@@ -1,13 +1,26 @@
-#include <cppunit/extensions/TestFactoryRegistry.h>
-#include <cppunit/ui/text/TestRunner.h>
+#include <cppunit/BriefTestProgressListener.h>
 #include <cppunit/CompilerOutputter.h>
+#include <cppunit/TestResult.h>
+#include <cppunit/TestResultCollector.h>
+#include <cppunit/TestRunner.h>
+#include <cppunit/extensions/TestFactoryRegistry.h>
 #include <iostream>
 
 int main()
 {
-    CppUnit::TextUi::TestRunner runner;
+    CppUnit::TestResult controller;
+    CppUnit::TestResultCollector collector;
+    controller.addListener(&collector);
+
+    // 逐条打印每个测试用例的名称与结果
+    CppUnit::BriefTestProgressListener progress;
+    controller.addListener(&progress);
+
+    CppUnit::TestRunner runner;
     runner.addTest(CppUnit::TestFactoryRegistry::getRegistry().makeTest());
-    runner.setOutputter(new CppUnit::CompilerOutputter(&runner.result(), std::cerr));
-    bool ok = runner.run("", false, true, true);
-    return ok ? 0 : 1;
+    runner.run(controller);
+
+    CppUnit::CompilerOutputter outputter(&collector, std::cout);
+    outputter.write();
+    return collector.wasSuccessful() ? 0 : 1;
 }

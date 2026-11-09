@@ -1,0 +1,4 @@
+digraph G { graph[fontname="WenQuanYi Zen Hei", dpi=150]; node[fontname="WenQuanYi Zen Hei", shape=circle, width=0.45, fixedsize=true]; edge[fontname="WenQuanYi Zen Hei"];
+1->2; 2->3[label=" T"]; 2->9[label=" F"]; 3->4; 4->5[label=" T"]; 4->8[label=" F"];
+5->6[label=" T"]; 5->7[label=" F"]; 6->7; 7->4; 8->2;
+R[shape=none, label="区域 R1~R4\nV(G)=E-N+2=11-9+2=4", fixedsize=false]; }
